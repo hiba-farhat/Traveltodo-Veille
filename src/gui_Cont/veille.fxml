@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Home" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_Cont.VeilleController">
+   <children>
+      <AnchorPane layoutX="-11.0" prefHeight="451.0" prefWidth="903.0" style="-fx-background-color: #5a5375; -fx-background-radius: 15;">
+         <children>
+            <Pane layoutX="491.0" layoutY="7.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="335.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="167.0" layoutY="21.0" text="Bonjour !" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <AnchorPane layoutX="34.0" layoutY="62.0" prefHeight="366.0" prefWidth="845.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css">
+               <children>
+                  <Pane layoutX="41.0" layoutY="26.0" prefHeight="82.0" prefWidth="474.0" style="-fx-background-color: #c3e2e8; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="58.0" layoutY="34.0" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="destination" layoutX="239.0" layoutY="28.0" prefHeight="29.0" prefWidth="216.0" style="-fx-background-color: #ffff;" styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
+                        <Label layoutX="27.0" layoutY="33.0" text="Veuillez saisir la destination">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Line endX="100.0" layoutX="444.0" layoutY="27.0" startX="100.0" startY="318.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+                  <Pane layoutX="38.0" layoutY="121.0" prefHeight="82.0" prefWidth="474.0" style="-fx-background-color: #c3e2e8; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="58.0" layoutY="34.0" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="31.0" text="Veuillez saisir la date de départ">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dateDep" layoutX="251.0" layoutY="27.0" prefHeight="27.0" prefWidth="200.0" style="-fx-background-radius: 10; -fx-background-color: #fff;" />
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="74.0" fitWidth="101.0" layoutX="731.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/logoAnnex.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblDestination" layoutX="688.0" layoutY="97.0" prefHeight="19.0" prefWidth="106.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="569.0" layoutY="97.0" text="Votre Destination :">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="570.0" layoutY="147.0" prefHeight="17.0" prefWidth="89.0" text="Date depart :">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="569.0" layoutY="207.0" text="Date arrivée :">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDateDep" layoutX="688.0" layoutY="147.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label fx:id="lblDateArr" layoutX="688.0" layoutY="208.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Button layoutX="755.0" layoutY="298.0" mnemonicParsing="false" onAction="#finish" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Terminer">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+                  <Pane layoutX="39.0" layoutY="234.0" prefHeight="82.0" prefWidth="474.0" style="-fx-background-color: #c3e2e8; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="58.0" layoutY="34.0" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="23.0" text="Veuillez saisir la date d'arrivée">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dateArr" layoutX="254.0" layoutY="21.0" prefHeight="27.0" prefWidth="191.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="569.0" layoutY="298.0" mnemonicParsing="false" onAction="#confirmer" prefHeight="27.0" prefWidth="76.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Lancer">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="65.0" layoutY="326.0" text="Donnez un nom à votre fichier">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nomFichier" layoutX="314.0" layoutY="323.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
